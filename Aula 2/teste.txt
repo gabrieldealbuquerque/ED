@@ -1,0 +1,35 @@
+Carone
+184500
+S
+Jardim Camburi
+23000
+S
+Leite Integral Selita
+10
+200
+S
+Presunto de Parma
+50
+300
+S
+Queijo
+30
+200
+N
+S
+Jardim da Penha
+161500
+S
+Biscoito
+5
+2000
+S
+Presunto de Parma
+50
+3000
+S
+Carne de Sol
+30
+50
+N
+N

@@ -1,11 +1,12 @@
 #ifndef Gato_h
 #define Gato_h
 
-#include <stdio.h>
+#define GATO 1
 
-typedef Gato Gato;
+typedef struct Gato Gato;
 
-Cachorro* criaGato();
-void desalocaGato();
+Gato* inicGato(char* nome, int nivel);
+void atribuiNivelAgressividadeGato(Gato* c, int nivel);
+void liberaGato(Gato* gato);
 
 #endif

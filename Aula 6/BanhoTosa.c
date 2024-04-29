@@ -8,7 +8,7 @@
  * */
 struct banhotosa{
 
-}
+};
 
 
 /* Cria uma loja de banho e tosa, ainda vazia, com duas listas de animais vazias
@@ -95,5 +95,3 @@ void liberaBanhoTosa(BanhoTosa* loja)
 {
     
 }
-
-#endif /* BanhoTosa_h */

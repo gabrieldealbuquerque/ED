@@ -1,48 +1,48 @@
-#include <stdio.h>
-#include "Lista.h"
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include "Lista.h"
 
+    struct celula_str{
+        int tipo;
+        void* Item;
+        struct celula_str* Prox;
+    };
 
-#define MANSO 0
-#define AGRESSIVO 1
+    tLista* insereCachorroNaLista (Cachorro* c)
+    {
+        tLista* p;
+        p->tipo = 0; //0 é pra cachorrros
+        p->Item = c;
+        p->Prox = NULL;
+        return p;
+    }
 
-struct celula_str{
-    int tipo;
-    void* Item;
-    struct celula_str* Prox;
-}
+    tLista* insereGatoNaLista (Gato* g)
+    {
+        tLista* p;
+        p->tipo = 1; //0 é pra gatos
+        p->Item = g;
+        p->Prox = NULL;
+        return p;
+    }
 
-typedef Celula TipoListaHet;
+    void desalocaLista (tLista* lista)
+    {
+        if(lista == NULL)
+        {
+            printf("Lista vazia\n");
+            return;
+        }
 
-TipoListaHet* criaCachorro (int tipo, char* nome)
-{
-    Cachorro* c = (Cachorro*) malloc(sizeof(Cachorro));
-    c->tipo = tipo;
-    c->nome = nome;
-    TipoListaHet* p = (Cachorro*) malloc(sizeof(Cachorro));
-    p->tipo = 0; //0 é pra cachorrros
-    p->Item = c;
-    p->Prox = NULL;
-    return p;
-}
-
-TipoListaHet* criaGato (int tipo, char* nome)
-{
-    Gato* g = (Gato*) malloc(sizeof(Gato));
-    c->tipo = tipo;
-    c->nome = nome;
-    TipoListaHet* p = (Gato*) malloc(sizeof(Gato));
-    p->tipo = 1; //0 é pra gatos
-    p->Item = g;
-    p->Prox = NULL;
-    return p;
-}
-
-void desalocaCachorro (char* nome)
-{
-
-}
-
-void desalocaGato (char * nome)
-{
-    
-}
+        tLista* aux = lista;
+        while (aux)
+        {
+            lista = aux -> Prox;
+            if (aux -> tipo == CACHORRO)
+                liberaCachorro(lista -> Item);
+            if (aux -> tipo == GATO)
+                liberaGato(lista -> Item);
+            free(aux);
+            aux = lista;
+        }
+    }

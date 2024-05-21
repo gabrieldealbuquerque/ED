@@ -38,7 +38,7 @@ int main(int argc, const char * argv[]) {
     imprimeBanhoTosa(loja);
     
     //muda nível de agressividade (por exemplo, bob ficou agressivo)
-    //atribuiNivelAgressividadeCachorro(bob, BRAVO);
+    atribuiNivelAgressividadeCachorro(bob, BRAVO);
     
     //precisa atualizar a situação do Bob na loja
     atualizaSituacaoCachorro(loja, bob);

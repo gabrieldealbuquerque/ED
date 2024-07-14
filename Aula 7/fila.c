@@ -75,14 +75,17 @@ void imprimeFila(tFila* fila)
 }
 void desalocaFila(tFila* fila)
 {
+    if (fila == NULL)
+        return;
     tLista* lista = fila -> inicio;
     tLista* aux = lista;
     while (lista)
     {
         aux = lista;
-        liberaAmostra(lista -> info);
-        free(aux);
         lista = lista -> prox;
+        liberaAmostra(aux -> info);
+        free(aux);
+
     }
 
     free(fila);

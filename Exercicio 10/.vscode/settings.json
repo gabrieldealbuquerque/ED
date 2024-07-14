@@ -1,0 +1,10 @@
+{
+    "C_Cpp.errorSquiggles": "enabled",
+    "files.associations": {
+        "taluno.h": "c",
+        "stdlib.h": "c",
+        "stdio.h": "c",
+        "aluno.h": "c",
+        "string.h": "c"
+    }
+}
